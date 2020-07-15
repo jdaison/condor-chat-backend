@@ -10,6 +10,8 @@ const helmet = require('compression');
 const { handlerError } = require('./src/middlewares');
 const cors = require('cors');
 const io = require('socket.io')(http);
+const favicon = require('serve-favicon');
+const path = require('path');
 
 require('dotenv').config();
 
@@ -21,7 +23,11 @@ app.use(cors());
 app.use(compression());
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true, parameterLimit: 50000 }));
-app.use(express.static(__dirname + '/static', { dotfiles: 'allow' }));
+
+const staticPath = path.join(__dirname, 'static');
+app.use(express.static(staticPath, { dotfiles: 'allow' }));
+
+app.use(favicon(path.join(staticPath, 'favicon.ico')));
 
 // Sentry.init({
 //   dsn: process.env.SENTRY_URL,
