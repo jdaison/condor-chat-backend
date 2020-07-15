@@ -5,10 +5,7 @@ const roomSchema = new mongoose.Schema({
     type: String,
     required: [true, 'roomName is required'],
   },
-  createdOn: {
-    type: String,
-    required: [true, 'CreatedOn date is required'],
-  },
+  createdOn: { type: Date, default: Date.now },
 });
 const Room = mongoose.model('Room', roomSchema);
 module.exports = Room;

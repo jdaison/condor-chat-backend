@@ -1,5 +1,5 @@
 'use strict';
-const roomModel = require('../../../models/rooms');
+const roomModel = require('../../../models/room');
 
 module.exports = {
   async getRooms() {
@@ -11,13 +11,12 @@ module.exports = {
   },
 
   async createRoom(data) {
-    data.createdOn = new Date();
     const room = new roomModel(data);
     return await room.save(data);
   },
 
   async updateRoomById(id, data) {
-    return await roomModel.findOneAndUpdate(id, data);
+    return await roomModel.findByIdAndUpdate(id, data);
   },
 
   async deleteRoomById(id) {
