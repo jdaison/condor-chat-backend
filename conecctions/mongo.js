@@ -10,4 +10,6 @@ mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
-});
+})
+
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
