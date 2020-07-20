@@ -1,8 +1,8 @@
 const schema = require('./validateWithJoi');
 
 module.exports = {
-  validateLogin(data) {
-    const value = schema.login.validate(data);
+  validateSinginApp(data) {
+    const value = schema.login.validate(data);    
     if (value.error) {
       return {
         failed: true,

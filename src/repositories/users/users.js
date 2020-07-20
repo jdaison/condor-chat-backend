@@ -9,6 +9,10 @@ module.exports = {
   async getUserById(id) {
     return await userModel.findById(id);
   },
+  
+  async getUserByUser(user) {
+    return await userModel.findOne({user});
+  },
 
   async createUser(data) {
     const user = new userModel(data);
