@@ -43,10 +43,8 @@ module.exports = {
 
     try {
       let response = await repositories.updateRoomById(req.params.id, body);
-      console.log(response);
       return response;
     } catch (err) {
-      console.log(err.toString());
       return { failed: true, status: 500, message: err.name };
     }
   },

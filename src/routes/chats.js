@@ -1,4 +1,4 @@
-'use strict';
+
 
 const controllerUser = require('../controllers/chats/chats');
 const { validateToken } = require('../middlewares');

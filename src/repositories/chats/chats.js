@@ -1,4 +1,4 @@
-'use strict';
+
 const chatModel = require('../../../models/chat');
 
 module.exports = {
@@ -16,7 +16,6 @@ module.exports = {
   },
 
   async updateChatById(id, data) {
-    console.log(id, data);
     return await chatModel.findByIdAndUpdate(id, data);
   },
 

@@ -1,57 +1,61 @@
-const repositories = require('../../repositories/chats/chats');
+const repositories = require('../../repositories/users/users');
 const validate = require('../../utils/Joi');
+const bcrypt = require('bcryptjs');
 
 module.exports = {
-  async getChats() {
+  async getUsers() {
     try {
-      const response = await repositories.getChats();
+      const response = await repositories.getUsers();
       return response;
     } catch (err) {
       return { failed: true, status: 500, message: err.name };
     }
   },
 
-  async getChatById(id) {
+  async getUserById(id) {
     try {
-      let response = await repositories.getChatById(id);
+      let response = await repositories.getUserById(id);
       return response;
     } catch (err) {
       return { failed: true, status: 500, message: err.name };
     }
   },
 
-  async createChat(body) {
-    body = validate.validateCreateChat(body);
+  async createUser(body) {
+    body = validate.validateCreateUser(body);
     if (body.failed) {
       return body;
     }
     try {
-      let response = await repositories.createChat(body);
+      body.password = bcrypt.hashSync(body.password);
+      let response = await repositories.createUser(body);
       return response;
     } catch (err) {
       return { failed: true, status: 500, message: err.name };
     }
   },
 
-  async updateChatById(req) {
+  async updateUserById(req) {
     let { body } = req;
-    body = validate.validateUpdateChat(body);
+    body = validate.validateUpdateUser(body);
 
     if (body.failed) {
       return body;
     }
 
     try {
-      let response = await repositories.updateChatById(req.params.id, body);
+      const passworHashed = bcrypt.hashSync(body.password);
+      body.password = passworHashed
+      let response = await repositories.updateUserById(req.params.id, body);
       return response;
     } catch (err) {
       return { failed: true, status: 500, message: err.name };
     }
   },
 
-  async deleteChatById(id) {
+  async deleteUserById(id) {
     try {
-      let response = await repositories.deleteChatById(id);
+      let response = await repositories.deleteUserById(id);
       return response;
     } catch (err) {
       return { failed: true, status: 500, message: err.name };

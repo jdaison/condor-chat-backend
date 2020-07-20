@@ -1,4 +1,4 @@
-'use strict';
+
 
 const controllerUser = require('../controllers/rooms/rooms');
 const { validateToken } = require('../middlewares');
