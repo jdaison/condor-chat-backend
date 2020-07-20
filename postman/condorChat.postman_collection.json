@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "8223d7c9-9228-4d1b-9e0c-34391ca70625",
+		"_postman_id": "a5890a42-fa02-4fd9-99b9-08c69332f6d1",
 		"name": "condorChat",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,6 +11,16 @@
 				{
 					"name": "create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -39,6 +49,16 @@
 				{
 					"name": "update",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -51,7 +71,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/rooms/5f0d771c8115e635931d4af4",
+							"raw": "http://localhost:3000/rooms/5f15e17b84543969f04360bf",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -59,7 +79,7 @@
 							"port": "3000",
 							"path": [
 								"rooms",
-								"5f0d771c8115e635931d4af4"
+								"5f15e17b84543969f04360bf"
 							]
 						}
 					},
@@ -71,6 +91,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -102,6 +132,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -131,6 +171,16 @@
 				{
 					"name": "Delete by id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -143,7 +193,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/rooms/5f0d705463c63d2ccb8dcdd2",
+							"raw": "http://localhost:3000/rooms/5f15e17b84543969f04360bf",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -151,7 +201,7 @@
 							"port": "3000",
 							"path": [
 								"rooms",
-								"5f0d705463c63d2ccb8dcdd2"
+								"5f15e17b84543969f04360bf"
 							]
 						}
 					},
@@ -166,6 +216,16 @@
 				{
 					"name": "create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -194,6 +254,16 @@
 				{
 					"name": "update",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -206,7 +276,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/chats/5f0e748a8cbfb86cca4738ad",
+							"raw": "http://localhost:3000/chats/5f15e24fa6e09d8c1c873308",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -214,7 +284,7 @@
 							"port": "3000",
 							"path": [
 								"chats",
-								"5f0e748a8cbfb86cca4738ad"
+								"5f15e24fa6e09d8c1c873308"
 							]
 						}
 					},
@@ -226,11 +296,21 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"roomName\": \"General2\"\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -257,11 +337,21 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"roomName\": \"General2\"\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -269,7 +359,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/chats/5f0e74c42d19cf6d0abb6fae",
+							"raw": "http://localhost:3000/chats/5f15e24fa6e09d8c1c873308",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -277,7 +367,7 @@
 							"port": "3000",
 							"path": [
 								"chats",
-								"5f0e74c42d19cf6d0abb6fae"
+								"5f15e24fa6e09d8c1c873308"
 							]
 						}
 					},
@@ -286,6 +376,16 @@
 				{
 					"name": "Delete by id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"body": {
@@ -298,7 +398,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/chats/5f0e74c42d19cf6d0abb6fae",
+							"raw": "http://localhost:3000/chats/5f15e24fa6e09d8c1c873308",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -306,7 +406,244 @@
 							"port": "3000",
 							"path": [
 								"chats",
-								"5f0e74c42d19cf6d0abb6fae"
+								"5f15e24fa6e09d8c1c873308"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\"jdaison@hotmail.com\",\n    \"password\":\"john1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"roomName\": \"General2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"john1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/5f158910642f9574b0bc5e2b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5f158910642f9574b0bc5e2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/5f1525be642f9574b0bc5e2a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5f1525be642f9574b0bc5e2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"roomName\": \"General2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/5f15d612dd4a0d4704d0cbb9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5f15d612dd4a0d4704d0cbb9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e888f4f-566d-4542-93d5-e5fa129f94bc",
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"const token = jsonData.token;\r",
+									"pm.globals.set(\"token\", token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"jdaison@hotmail.com\",\n    \"password\":\"john1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
 							]
 						}
 					},
