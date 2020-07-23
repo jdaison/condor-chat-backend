@@ -28,8 +28,10 @@ module.exports = {
     message: Joi.string().min(1).max(200).required(),
   }),
   createUser: Joi.object({
-    user: Joi.string().min(1).max(200).required(),
+    user: Joi.string().email().required(),
     password: passwordComplexity(complexityOptions),
+    userName: Joi.string().min(5).max(200).required(),
+    urlImage: Joi.string().uri().required()
   }),
   updateUser: Joi.object({
     password: passwordComplexity(complexityOptions),
