@@ -31,7 +31,7 @@
     "helmet": "^3.23.3",
     "joi-password-complexity": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.9.24",
     "serve-favicon": "^2.5.0",
     "socket.io": "^2.3.0"
